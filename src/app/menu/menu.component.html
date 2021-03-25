@@ -10,8 +10,10 @@
             <ng-container *ngIf="userMenu">
               <li><a (click)="handleStudent()">User Details</a></li>
             </ng-container>
-
+            
+            <ng-container *ngIf="dashboardMenu">
             <li><a (click)="handleLogout()">Logout</a></li>
+            </ng-container>
           </ul>
         
       </nav>

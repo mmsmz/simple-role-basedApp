@@ -13,6 +13,7 @@ export class MenuComponent implements OnInit {
   getLocatStorageItem: any;
   adminMenu:boolean =false;
   userMenu:boolean =false;
+  dashboardMenu: boolean = false;
 
 
   constructor(private router: Router,
@@ -36,6 +37,12 @@ export class MenuComponent implements OnInit {
       this.adminMenu =false;
       this.userMenu = true;
     }
+    else  {
+      this.dashboardMenu = true;
+      this.adminMenu =false;
+      this.userMenu = false;
+    }
+    
   }
 
   handleAdminStudent(){
