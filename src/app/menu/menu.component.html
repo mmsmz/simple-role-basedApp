@@ -1,0 +1,20 @@
+<header>
+    <div class="container">
+      <a href="#" class="logo">Student Registration APP </a>
+      <nav>
+          <ul>
+            <ng-container *ngIf="adminMenu">
+              <li><a (click)="handleAdminStudent()">Admin Details</a></li>
+            </ng-container>
+
+            <ng-container *ngIf="userMenu">
+              <li><a (click)="handleStudent()">User Details</a></li>
+            </ng-container>
+
+            <li><a (click)="handleLogout()">Logout</a></li>
+          </ul>
+        
+      </nav>
+    </div>
+  </header>
+  
