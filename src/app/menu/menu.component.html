@@ -1,5 +1,4 @@
- <!-- <!-- <header>
-    <div class="container">
+     <!-- <div class="container">
       <a href="#" class="logo">Student Registration APP </a>
       <nav>
           <ul>
@@ -12,31 +11,31 @@
             </ng-container>
             
             <ng-container *ngIf="dashboardMenu">
-            <li><a (click)="handleLogout()">Logout</a></li>
+            <li><a (click)="handleLogout()">Login / Logout</a></li>
             </ng-container>
-          </ul>
-        
+          </ul>        
       </nav>
     </div>
-  </header>  -->
+ -->
 
+ <nav>
+  <input type="checkbox" id="check">
+  <label for="check" class="checkbtn">
+    <i class="fas fa-bars"></i>
+  </label>
+  <label class="logo">Student APP</label>
+  <ul>
+    <ng-container *ngIf="adminMenu">
+      <li><a (click)="handleAdminStudent()">Admin Details</a></li>
+    </ng-container>
 
-  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-    <a href="#" class="navbar-brand active">Student APP</a>
-    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-        <div class="navbar-nav">
-            <a href="#" class="nav-item nav-link">Admin </a>
-            <a href="#" class="nav-item nav-link">About</a>
-            <a href="#" class="nav-item nav-link">Products</a>
-        </div>
-        
-        <!-- <form class="form-inline ml-auto">
-            <input type="text" class="form-control mr-sm-2" placeholder="Search">
-            <button type="submit" class="btn btn-outline-light">Search</button>
-        </form> -->
-    </div>
+    <ng-container *ngIf="userMenu">
+      <li><a (click)="handleStudent()">User Details</a></li>
+    </ng-container>
+    
+    <ng-container *ngIf="dashboardMenu">
+    <li><a class="active" (click)="handleLogout()">Login / Logout</a></li>
+    </ng-container>
+    
+  </ul>
 </nav>
