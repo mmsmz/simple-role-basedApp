@@ -32,15 +32,18 @@ export class MenuComponent implements OnInit {
       
         this.adminMenu = true;
         this.userMenu = false;
+        this.dashboardMenu = true;
     }
     else if(this.getLocatStorageItem == "user" ){
       this.adminMenu =false;
       this.userMenu = true;
+      this.dashboardMenu = true;
     }
     else  {
-      this.dashboardMenu = true;
       this.adminMenu =false;
       this.userMenu = false;
+      this.dashboardMenu = true;
+      
     }
     
   }
